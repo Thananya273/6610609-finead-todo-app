@@ -24,7 +24,6 @@ RUN npm install --omit=dev
 # Copy backend source
 COPY TODO/todo_backend/ ./
 
-# --- STEP FROM YOUR SCREENSHOT ---
 # Create the static folder and move the frontend build into it
 RUN mkdir -p static
 COPY --from=frontend-builder /app/todo_frontend/build ./static/build
